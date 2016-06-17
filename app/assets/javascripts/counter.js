@@ -17,5 +17,11 @@ function countdown(minutes) {
 
     }
     tick();
-    
+
+ 
+}
+
+function myStopFunction(){
+    clearTimeout(myVar);
+    document.getElementById("timer").innerHTML = ""
 }

@@ -10,7 +10,6 @@
       <th>Actual time</th>
       <th>Start button</th>
       <th>Stop button</th>
-      <th>Reset button</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,8 +20,7 @@
         <td><%= task.task_name %></td>
         <td>Estimated <%= task.task_time_in_minutes %> minutes</td>
         <td><button onClick="countdown(<%= task.task_time_in_minutes %>)">Start</button></td>
-        <td><button onClick="timer.stop()">Stop</button></td>
-        <td><button onClick="timer.reset(0)">Reset</button></td>
+        <td><button onClick="myStopFunction()">Stop</button></td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
