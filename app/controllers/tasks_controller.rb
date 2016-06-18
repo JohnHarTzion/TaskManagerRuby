@@ -1,10 +1,12 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
+
   # GET /tasks
   # GET /tasks.json
   def index
     @tasks = Task.all
+  
   end
 
   # GET /tasks/1
@@ -15,6 +17,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   def new
     @task = Task.new
+  
   end
 
   # GET /tasks/1/edit
@@ -30,12 +33,15 @@ class TasksController < ApplicationController
       if @task.save
         format.html { redirect_to @task, notice: 'Task was successfully created.' }
         format.json { render :show, status: :created, location: @task }
+        format.html {redirect_to @pluck}
+        format.json {render :show , location: @pluck }
       else
         format.html { render :new }
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
   end
+  
 
   # PATCH/PUT /tasks/1
   # PATCH/PUT /tasks/1.json
@@ -71,4 +77,4 @@ class TasksController < ApplicationController
     def task_params
       params.require(:task).permit(:task_name, :task_time_in_minutes)
     end
-end
+ end   

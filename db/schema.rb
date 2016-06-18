@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160616200147) do
+ActiveRecord::Schema.define(version: 20160617210709) do
+
+  create_table "progress_tasks", force: :cascade do |t|
+    t.string   "in_progress_task"
+    t.string   "in_progress_time_minutes"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string   "task_name"

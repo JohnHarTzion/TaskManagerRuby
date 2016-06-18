@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Progress Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>In progress task</th>
+      <th>In progress time minutes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @progress_tasks.each do |progress_task| %>
+      <tr>
+        <td><%= progress_task.in_progress_task %></td>
+        <td><%= progress_task.in_progress_time_minutes %></td>
+        <td><%= link_to 'Show', progress_task %></td>
+        <td><%= link_to 'Edit', edit_progress_task_path(progress_task) %></td>
+        <td><%= link_to 'Destroy', progress_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Progress task', new_progress_task_path %>

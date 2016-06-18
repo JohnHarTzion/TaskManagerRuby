@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>In progress task:</strong>
+  <%= @progress_task.in_progress_task %>
+</p>
+
+<p>
+  <strong>In progress time minutes:</strong>
+  <%= @progress_task.in_progress_time_minutes %>
+</p>
+
+<%= link_to 'Edit', edit_progress_task_path(@progress_task) %> |
+<%= link_to 'Back', progress_tasks_path %>

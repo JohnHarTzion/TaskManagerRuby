@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  in_progress_task: MyString
+  in_progress_time_minutes: MyString
+
+two:
+  in_progress_task: MyString
+  in_progress_time_minutes: MyString

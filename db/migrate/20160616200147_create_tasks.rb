@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration
       t.string :task_name
       t.string :task_time_in_minutes
 
+
       t.timestamps null: false
     end
-  end
 end
